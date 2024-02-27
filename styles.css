@@ -1,0 +1,517 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden; /* Para que el video de fondo ocupe todo el viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#videoFondo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Asegura que el video esté detrás de todo el contenido */
+  background-size: cover;
+  opacity: 0.7;
+}
+
+/* contenedor general */
+#container-general {
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  box-sizing: border-box;
+  gap: 15px;
+}
+
+/* contenedor izquierdo */
+#container-left {
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: -5px 5px 5px 0px black;
+  width: 60%;
+  box-sizing: border-box;
+}
+
+/* contenedor de texto a encriptar/desencriptar*/
+#container_text {
+  /* border: 1px solid green; */
+  margin: auto;
+  max-width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+#texts-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TEXTAREA */
+textarea {
+  border: none; /* Elimina el contorno de textarea */
+  outline: none; /* Elimina el contorno de enfoque */
+  width: 90%;
+  height: 85%;
+  resize: none;
+  font-size: 24px;
+  background-color: unset;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+textarea:focus {
+  outline: none; /* Elimina el contorno de enfoque al hacer clic */
+}
+
+/* CONTENEDOR DEL PARRAFO Y LOS 2 BOTONES */
+#container_p_btns {
+  /* border: 1px solid black; */
+  max-width: 90%;
+  height: 20%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+#paragraph-left {
+  /* border: 1px solid red; */
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: end;
+}
+
+#paragraph-left > p {
+  padding: 0 10px;
+}
+
+/* CONTENEDOR DE BOTONES */
+#container_buttons {
+  width: 90%;
+  height: 70%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  /* justify-content: space-between;
+  align-items: start; */
+  box-sizing: border-box;
+}
+
+#container_buttons > input {
+  background-color: #0a3871;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  width: 100%;
+  height: 60px;
+  /* margin-inline: 20px; */
+}
+
+/* contenedor derecho */
+#container-right {
+  /* border: 1px solid blue; */
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  /* flex-wrap: wrap; */
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -5px 5px 5px 0px black;
+}
+
+#container-img {
+  width: 80%;
+  display: flex;
+  box-sizing: border-box;
+  /* flex-wrap: wrap; */
+}
+
+img {
+  width: 90%;
+  height: 250px;
+  margin: 10px auto;
+}
+
+#subtitle,
+#paragraph-right {
+  /* border: 1px solid green; */
+  width: 90%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+h2 {
+  margin: 0;
+}
+
+#container-right > .container_button {
+  /* border: 1px solid red; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#container-right > .container_button > input {
+  margin: 0;
+  padding: 0;
+}
+
+/* DAMOS ESTILO A LOS ELEMENTOS CREADOS MEDIANTE LA MANIPULACION DEL DOM */
+/* ENCRIPTADO */
+/* Contenedor principal de textarea y la imagen */
+#container-encriptado {
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+/* Contenedor de textarea */
+#container-textarea {
+  /* background-color: aquamarine; */
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* etiqueta <textarea> */
+#container-textarea > textarea {
+  /* border: 1px solid black; */
+  width: 95%;
+  height: 85%;
+  padding: 0px 15px;
+  font-size: 20px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* contenedor de la imagen debajo de textarea */
+#container-h3-img {
+  /* border: 1px solid red;  */
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* etiqueta <img> */
+#container-h3-img > img {
+  width: 90%;
+  height: 150px;
+  margin: -20px 0 0;
+  opacity: 0.5;
+}
+
+/* etiqueta <h3> */
+#container-h3-img > h3 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* DESENCRIPTADO */
+#container-desencriptado {
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#container-desencriptado > textarea {
+  border-radius: 30px;
+  width: 100%;
+  height: 50%;
+  padding: 15px 20px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+#subcontainer-h3-img {
+  /* border: 1px solid red; */
+  text-align: center;
+  height: 50%;
+}
+
+#subcontainer-h3-img > h3 {
+  margin: 5px;
+  font-size: 16px;
+  width: 90%;
+}
+
+#subcontainer-h3-img > img {
+  height: 130px;
+  margin: 5px 0;
+  opacity: 0.5;
+}
+
+#subcontainer-h3-img > input {
+  background-color: #0a3871;
+  color: white;
+  margin-block: 5px;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+/* BOTON COPIAR texto Encriptado/Desencriptado */
+#btnCopiar {
+  background-color: #0a3871;
+  color: white;
+  margin-block: 10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+
+
+/* RESPONSIVE DESING */
+@media (501px <= width <= 700px){
+  /* Contenedor izquierdo */
+
+  #paragraph-left {
+    margin-block: 10px;
+  }
+  #container_buttons {
+    height: auto;
+  }
+  #container_buttons > input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (320px <= width <= 500px) {
+  #container-general {
+    /* border: 3px solid red; */
+    width: 95%;
+    height: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  /* CONTAINER LEFT (ahora esta Arriba) */
+  #container-left {
+    background-color: unset;
+    box-shadow: unset;
+    width: 95%;
+    height: 50%;
+    display: flex;
+    gap: 10px;
+  }
+
+  /* container_text (esta a lado izquierdo de los botones encrip/desencrip) */
+  #container_text {
+    height: 100%;
+    width: 70%;
+    margin: 0;
+  }
+
+  #texts-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: -5px 5px 5px 0px black;
+    border-radius: 30px;
+  }
+
+  /* container_p_btns (esta al lado derecho del container text) */
+  #container_p_btns > #paragraph-left {
+    display: none;
+  }
+
+  #container_p_btns {
+    width: 30%;
+    height: 100%;
+    display: block;
+  }
+  #container_buttons {
+    /* box-shadow: -5px 5px 5px 0px black; */
+    width: 100%;
+    height: 100%;
+    /* border-radius: 30px; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #container_buttons > input {
+    /* width: 100px; */
+    height: 40px;
+    flex-direction: row;
+    font-size: 12px;
+    margin-inline: 0;
+    background-color: #3b4959;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+
+  /* CONTAINER RIGHT (Ahora esta abajo)*/
+  #container-right {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* background-color: unset; */
+    box-shadow: unset;
+    width: 95%;
+    height: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #container-img {
+    /* width: 50%; */
+    height: 100%;
+  }
+  #container-img > img {
+    /* border: 1px solid red; */
+    width: 90%;
+    height: auto;
+  }
+
+  /* #subtitle {
+    width: 50%;
+  } */
+
+  #subtitle > h2 {
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+  }
+
+  #paragraph-right {
+    display: none;
+  }
+
+  /* Encriptado */
+  #container-right {
+        box-shadow: 5px 5px 5px 0px black;
+    /* background-color: aquamarine; */
+    /* opacity: 0.5; */
+  }
+
+  #container-encriptado {
+    display: flex;
+    gap: 10px;
+  }
+
+  #container-textarea {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    /* box-shadow: -5px 5px 5px 0px black; */
+    width: 70%;
+    height: 100%;
+  }
+  #container-textarea > textarea {
+    width: 90%;
+    height: 85%;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  /* Contenedor izquierdo (donde esta el boton copiar) */
+  #container-h3-img {
+    /* border-radius: 30px; */
+    /* border: 1px solid red; */
+    background-color: unset;
+    width: 30%;
+    height: 100%;
+  }
+
+  #container-h3-img > h3 {
+    width: 100%;
+    font-size: 16px;
+    margin-block: 10px;
+    color: black;
+  }
+
+  #btnCopiar {
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    font-size: 12px;
+    background-color: #3b4959;
+  }
+
+  #container-h3-img > img {
+    display: none;
+  }
+
+  /* DESENCRIPTADO */
+  #container-desencriptado {
+    flex-direction: row;
+    gap: 10px;
+  }
+  #container-desencriptado > #textarea {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 70%;
+    height: 100%;
+    padding: 20px 10px;
+  }
+  #subcontainer-h3-img {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #subcontainer-h3-img > img {
+    display: none;
+  }
+  #subcontainer-h3-img > h3 {
+    width: 100%;
+    font-size: 14px;
+    margin-block: 10px;
+  }
+  #subcontainer-h3-img > input {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    background-color: #3b4959;
+  }
+}
+

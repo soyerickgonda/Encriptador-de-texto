@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="container-general">
+      <div id="container-left">
+        <div id="container_text">
+          <div id="texts-box">
+            <textarea
+              name=""
+              id="mitextarea"
+              placeholder="Ingresa el texto aquí"
+            ></textarea>
+          </div>
+        </div>
+        <div id="container_p_btns">
+          <div id="paragraph-left">
+            <p>Solo letras minusculas y sin acentos</p>
+          </div>
+          <div id="container_buttons">
+            <input class="btn" type="button" value="Encriptar" id="encriptar"/>
+            <input class="btn" type="button" value="Desencriptar" id="desencriptar" />
+          </div>
+        </div>
+      </div>
+      <div id="container-right">
+        <div id="container-img">
+          <img src="./imagenes/hombreLupa.png" alt="" />
+        </div>
+        <div id="subtitle">
+          <h2>
+            Ningun mensaje <br/>
+            fue encontrado
+          </h2>
+        </div>
+        <div id="paragraph-right">
+          <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+        </div>
+      </div>
+    </main>
+    <!-- contenedor de video de fondo -->
+    <div>
+      <video autoplay muted loop id="videoFondo">
+        <source src="./imagenes/istockphoto-472763629-640_adpp_is.mp4" type="video/mp4">
+        <source src="./imagenes/istockphoto-472763629-640_adpp_is.mp4" type="video/webm">
+      </video>
+    </div>
+    <!-- <script src="./app.js"></script> -->
+    <script src="./app2.js"></script>
+  </body>
+</html>
