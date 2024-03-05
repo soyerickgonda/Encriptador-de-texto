@@ -44,7 +44,7 @@ main {
 }
 /* Container Left */
 #container-left {
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   box-shadow: -10px 5px 5px 0px black;
   border-radius: 30px;
   opacity: 0.8;
@@ -91,7 +91,7 @@ textarea {
   gap: 10px;
 }
 input {
-  background-color: #1C4272;
+  background-color: #1c4272;
   width: 50%;
   height: 80%;
   border-radius: 30px;
@@ -151,7 +151,7 @@ input {
 }
 .container-btn > input {
   width: 50%;
-  height: 70%; 
+  height: 70%;
 }
 
 /* ENCRIPTADO */
@@ -200,3 +200,276 @@ input {
   border-radius: 0 0 30px 30px;
 }
 
+/* MEDIA QUERY (Responsive Desing) */
+
+@media (50px <= width <= 150px) {
+  /* Ocultamos el contenedor derecho */
+  #container-right {
+    display: none;
+  }
+  main {
+    height: 95vh;
+  }
+  #container-left {
+    width: 100%;
+    height: 100%;
+  }
+  .subcontainer-left {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #container-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 25px;
+    height: 60%;
+    margin-bottom: 10px;
+  }
+  #mitextarea {
+    padding: 0 5px;
+    font-size: 16px;
+  }
+  #container-paragraph-left {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+  }
+  #container-paragraph-left > p {
+    height: 100%;
+    font-size: 14px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+  #container-buttons {
+    flex-direction: column;
+    padding: 0;
+    margin: 10px 5px;
+    gap: 10px;
+  }
+  #encriptar,
+  #desencriptar {
+    width: 90%;
+    height: 40%;
+    font-size: 14px;
+    margin: auto;
+  }
+}
+
+@media (150px <= width <= 375px) {
+  /* Ocultamos el contenedor derecho */
+  #container-right {
+    display: none;
+  }
+  main {
+    height: 95vh;
+  }
+  #container-left {
+    width: 100%;
+    height: 100%;
+  }
+  .subcontainer-left {
+    overflow: hidden;
+  }
+
+  #container-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 25px;
+    height: 60%;
+    margin-bottom: 10px;
+  }
+  #mitextarea {
+    padding: 0 5px;
+    font-size: 18px;
+  }
+  #container-paragraph-left {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    padding: 0;
+  }
+  #container-paragraph-left > p {
+    height: 100%;
+    font-size: 14px;
+    /* padding: 0 10px; */
+    display: flex;
+    align-items: end;
+  }
+  #container-buttons {
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+    gap: 5px;
+  }
+  #encriptar,
+  #desencriptar {
+    width: 90%;
+    height: 40%;
+    font-size: 16px;
+    margin: auto;
+  }
+}
+
+@media (375px <= width <= 600px) {
+  /* Ocultamos el contenedor derecho */
+  #container-right {
+    display: none;
+  }
+  main {
+    height: 95vh;
+  }
+  #container-left {
+    width: 100%;
+    height: 100%;
+  }
+  .subcontainer-left {
+    overflow: hidden;
+  }
+
+  #container-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 25px;
+    height: 60%;
+    margin-bottom: 10px;
+  }
+  #mitextarea {
+    padding: 0 5px;
+    font-size: 20px;
+  }
+  #container-paragraph-left {
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+  }
+  #container-paragraph-left > p {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  #container-buttons {
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+    gap: 10px;
+  }
+  #encriptar,
+  #desencriptar {
+    width: 90%;
+    height: 40%;
+    font-size: 20px;
+    margin: auto;
+  }
+}
+
+@media (600px <= width <= 768px) {
+  .subcontainer-left {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #container-text {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    height: 65%;
+  }
+  #mitextarea {
+    padding: 0 15px;
+  }
+  #container-paragraph-left {
+    padding: 0;
+    width: 80%;
+  }
+  #container-paragraph-left > p {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+  }
+  #container-buttons {
+    padding: 0 10px;
+    height: 15%;
+    overflow: hidden;
+  }
+  #encriptar,
+  #desencriptar {
+    margin: auto;
+    height: 65%;
+    font-size: 18px;
+  }
+
+  /* Texto Encriptado */
+  #container-textarea-encrip {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 45%;
+  }
+  #textareaEncriptado {
+    padding: 0 20px;
+  }
+  #container-h3-encrip{
+    height: 9%;
+  }
+
+  /* Texto Desencriptado */
+  #container-textarea-desencrip {
+    height: 45%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #container-textarea-desencrip > textarea {
+    padding: 0 20px;
+  }
+  #container-h3-desencrip {
+    height: 9%;
+  }
+  #container-h3-desencrip > h3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+}
+@media (768px <= width <= 1440px) {
+  #container-paragraph-left {
+    padding: 0;
+    width: 80%;
+  }
+  #container-paragraph-left > p {
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+  #container-buttons {
+    padding: 0 10px;
+    height: 15%;
+    overflow: hidden;
+  }
+  #encriptar,
+  #desencriptar {
+    margin: auto;
+    height: 65%;
+    font-size: 18px;
+  }
+
+  /* Texto Encriptado */
+  #textareaEncriptado {
+    padding: 25px;
+  }
+
+
+  /* Texto Desencriptado */
+  #container-textarea-desencrip > textarea {
+    padding: 25px;
+  }
+}
