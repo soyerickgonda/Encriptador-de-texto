@@ -6,6 +6,14 @@ const btndesencriptar = document.getElementById("desencriptar");
 //EXTRAEMOS el conatiner-right para luego reemplazar su contenido con todo lo creado para los botones (encriptado/desencriptado)
 const containerRight = document.getElementById("container-right");
 
+//ELEMENTO DEL MODAL
+const btnEncriptarTexto = document.getElementById("encriptar");
+const btnDesencriptarTexto = document.getElementById("desencriptar");
+
+const modal = document.getElementById("container-cards");
+const textoEncripModal = document.getElementById("textoEncrip");
+const closeModal = document.getElementsByClassName("close");
+
 //BOTON COPIAR TEXTO encriptado/desencriptado
 const containerBtn = document.createElement("div"); //contenedor del boton encriptado
 containerBtn.setAttribute("class", "container-btn");
@@ -27,7 +35,7 @@ containerTextEncrip.appendChild(newTextareaEncrip);
 newDiv.appendChild(containerTextEncrip);
 
 // Añadimos el Boton para copiar el texto desencriptado
-newDiv.appendChild(containerBtn); 
+newDiv.appendChild(containerBtn);
 
 const containerH3Encrip = document.createElement("div"); //contenedor para el h3 del encriptado
 containerH3Encrip.setAttribute("id", "container-h3-encrip");
@@ -161,7 +169,31 @@ btndesencriptar.addEventListener("click", function () {
 
   containerRight.innerHTML = "";
   containerRight.appendChild(newDiv2);
+  console.log(containerRight);
 });
+
+// btnencriptar.addEventListener("click", function () {
+//   if (validarTexto(texto)) {
+//     modal.style.display = "block";
+//   }
+// });
+
+// closeModal.addEventListener("click", function () {
+//   modal.style.display = "none";
+// });
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+  // btnencriptar.removeEventListener("click");
+  btnencriptar.addEventListener("click", function () {
+    if (validarTexto(texto)) {
+      modal.style.display = "block";
+    }
+  });
+}
+// if (window.matchMedia("(max-width: 600px)").matches) {
+//   btndesencriptar.removeEventListener("click");
+//   btndesencriptar.addEventListener("click", abrirModal);
+// }
 
 /*
 // Evento del Btn Copiar
