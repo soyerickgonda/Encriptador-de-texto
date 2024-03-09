@@ -16,7 +16,7 @@ body {
   /* background-color: lightblue; */
   background-image: url(./imagenes/candado-encriptar.mp4);
   overflow: hidden;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -25,11 +25,11 @@ body {
 }
 
 #videoFondo {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   opacity: 0.7;
 }
 
