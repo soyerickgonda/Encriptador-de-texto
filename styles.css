@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Video de fondo en el Body - mensje de prueba, borrar*/
+/* Video de fondo en el Body*/
 body {
   height: 100vh;
   display: flex;
