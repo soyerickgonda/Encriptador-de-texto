@@ -359,13 +359,13 @@ input {
   }
 
   .container-multimedia {
-    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
+    /* position: relative; Cambiamos la posición para que el video de fondo se desplace con el contenido */
     overflow: hidden; /* Ajustamos el overflow según sea necesario */
   }
   #videoFondo {
     position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
     min-width: unset; /* Ajustamos el tamaño mínimo según sea necesario */
-    min-height: unset; /* Ajustamos el tamaño mínimo según sea necesario */
+    /* min-height: unset; Ajustamos el tamaño mínimo según sea necesario */
   }
 
   main {
