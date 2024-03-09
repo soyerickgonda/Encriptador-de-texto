@@ -357,6 +357,17 @@ input {
   #container-right {
     display: none;
   }
+
+  .container-multimedia {
+    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
+    overflow: hidden; /* Ajustamos el overflow según sea necesario */
+  }
+  #videoFondo {
+    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
+    min-width: unset; /* Ajustamos el tamaño mínimo según sea necesario */
+    min-height: unset; /* Ajustamos el tamaño mínimo según sea necesario */
+  }
+
   main {
     height: 95vh;
   }
@@ -471,6 +482,17 @@ input {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+
+  .container-multimedia {
+    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
+    overflow: hidden; /* Ajustamos el overflow según sea necesario */
+  }
+  #videoFondo {
+    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
+    min-width: unset; /* Ajustamos el tamaño mínimo según sea necesario */
+    min-height: unset; /* Ajustamos el tamaño mínimo según sea necesario */
+  }
+
   .subcontainer-left {
     overflow: hidden;
     text-overflow: ellipsis;
