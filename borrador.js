@@ -76,14 +76,17 @@ newDiv2.appendChild(containerImgDesencrip);
 
 
 //ELEMENTO DEL MODAL
-const modal = document.getElementById("container-cards");
-const textoEncripModal = document.getElementById("textoEncrip");
+// const modal = document.getElementById("container-cards");
+const cardEncriptado = document.getElementById('container-card-encriptado');
+const textoModalEncriptado = document.getElementById("textoEncrip");
+const cardDesencriptado = document.getElementById('container-card-desencriptado');
+const textoModalDesencriptado = document.getElementById('textoDesencrip');
 const closeModal = document.getElementsByClassName("close");
 
 
 //Primero: crear una funcion que encripte y una funcion que desencripte
 
-// Funcion encriptar
+// FUNCION ENCRIPTAR
 function encriptarTexto(texto) {
   //   let textArea = textarea.value;
   const vocales = {
@@ -102,7 +105,7 @@ function encriptarTexto(texto) {
   return texto;
 }
 
-// Funcion Desencriptar
+// FUNCION DESENCRIPTAR
 function desencriptarTexto(texto) {
   //   let textArea = textarea.value;
 
@@ -128,7 +131,7 @@ function validarTexto(texto) {
   return regex.test(texto);
 }
 
-// EVENTOS EN EL BTN ENCRIPTAR / DESENCRIPTAR
+// Evento para el Boton Encriptar
 btnencriptar.addEventListener("click", function () {
   const texto = textarea.value;
 
@@ -141,15 +144,23 @@ btnencriptar.addEventListener("click", function () {
     - simbolos o numeros`);
     return;
   }
-
+  
   const textoEncriptado = encriptarTexto(texto);
   newTextareaEncrip.value = textoEncriptado;
   textarea.value = ""; // Vaciar el textarea original
 
   containerRight.innerHTML = "";
   containerRight.appendChild(newDiv);
+
+  if(window.innerWidth < 600){
+    cardEncriptado.style.display = 'block'; //esto mostrara el modal creado en html para pantallas < a 600px
+    const textoEncriptado = encriptarTexto(texto);
+    textoModalEncriptado.value = textoEncriptado;
+    textarea.value = '';
+  } 
 });
 
+// Evento para el Boton Desencriptar
 btndesencriptar.addEventListener("click", function () {
   const texto = textarea.value;
 
@@ -169,10 +180,21 @@ btndesencriptar.addEventListener("click", function () {
 
   containerRight.innerHTML = "";
   containerRight.appendChild(newDiv2);
-  console.log(containerRight);
+
+  if(window.innerWidth < 600){
+    cardDesencriptado.style.display = 'block'; //esto mostrara el modal creado en html para pantallas < a 600px
+    const textoDesencriptado = desencriptarTexto(texto);
+    textoModalDesencriptado.value = textoDesencriptado;
+    textarea.value = "";
+  } 
 });
 
 // ABRIR Y CERRAR MODAL PARA PANTALLAS < A 600px
+// function cerrarModal (){
+//   cardEncriptado.style.display = 'none';
+// }
+
+// closeModal.addEventListener('click', cerrarModal)
 
 
 
