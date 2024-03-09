@@ -4,15 +4,8 @@ const btnencriptar = document.getElementById("encriptar");
 const btndesencriptar = document.getElementById("desencriptar");
 
 //EXTRAEMOS el conatiner-right para luego reemplazar su contenido con todo lo creado para los botones (encriptado/desencriptado)
+// const containerLeft = document.getElementById('container-left');
 const containerRight = document.getElementById("container-right");
-
-//ELEMENTO DEL MODAL
-const btnEncriptarTexto = document.getElementById("encriptar");
-const btnDesencriptarTexto = document.getElementById("desencriptar");
-
-const modal = document.getElementById("container-cards");
-const textoEncripModal = document.getElementById("textoEncrip");
-const closeModal = document.getElementsByClassName("close");
 
 //BOTON COPIAR TEXTO encriptado/desencriptado
 const containerBtn = document.createElement("div"); //contenedor del boton encriptado
@@ -80,6 +73,13 @@ const imagenDesencript = document.createElement("img"); //se crea img
 imagenDesencript.src = "./imagenes/startup1.png";
 containerImgDesencrip.appendChild(imagenDesencript);
 newDiv2.appendChild(containerImgDesencrip);
+
+
+//ELEMENTO DEL MODAL
+const modal = document.getElementById("container-cards");
+const textoEncripModal = document.getElementById("textoEncrip");
+const closeModal = document.getElementsByClassName("close");
+
 
 //Primero: crear una funcion que encripte y una funcion que desencripte
 
@@ -172,28 +172,10 @@ btndesencriptar.addEventListener("click", function () {
   console.log(containerRight);
 });
 
-// btnencriptar.addEventListener("click", function () {
-//   if (validarTexto(texto)) {
-//     modal.style.display = "block";
-//   }
-// });
+// ABRIR Y CERRAR MODAL PARA PANTALLAS < A 600px
 
-// closeModal.addEventListener("click", function () {
-//   modal.style.display = "none";
-// });
 
-if (window.matchMedia("(max-width: 600px)").matches) {
-  // btnencriptar.removeEventListener("click");
-  btnencriptar.addEventListener("click", function () {
-    if (validarTexto(texto)) {
-      modal.style.display = "block";
-    }
-  });
-}
-// if (window.matchMedia("(max-width: 600px)").matches) {
-//   btndesencriptar.removeEventListener("click");
-//   btndesencriptar.addEventListener("click", abrirModal);
-// }
+
 
 /*
 // Evento del Btn Copiar

@@ -219,8 +219,7 @@ input {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .card {
   width: 80%;
@@ -312,31 +311,46 @@ input {
     font-size: 16px;
   }
   #container-paragraph-left {
+    width: 90%;
+    margin: 10px auto;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 0;
   }
   #container-paragraph-left > p {
     height: 100%;
-    font-size: 14px;
-    padding: 0 10px;
+    font-size: 16px;
+    padding: 0 0 0 10px;
     display: flex;
     align-items: center;
   }
   #container-buttons {
     flex-direction: column;
     padding: 0;
-    margin: 10px 5px;
+    margin: 5px auto 0;
+    width: 90%;
+    height: 20%;
+    overflow: hidden;
     gap: 10px;
   }
   #encriptar,
   #desencriptar {
-    width: 90%;
-    height: 40%;
-    font-size: 14px;
+    width: 100%;
+    height: 50%;
+    font-size: 16px;
     margin: auto;
+    overflow: hidden;
   }
 }
+
+/* Horizontal */
+/* @media (min-width: 150px) and (max-width: 500px) and (orientation: landscape) {
+  #container-text {
+    background-color: aquamarine;
+    border: 1px solid red;
+    height: 100%;
+  }
+} */
 
 @media (150px <= width <= 375px) {
   /* Ocultamos el contenedor derecho */
@@ -357,39 +371,43 @@ input {
   #container-text {
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 25px;
+    margin-top: 30px;
     height: 60%;
     margin-bottom: 10px;
   }
   #mitextarea {
     padding: 0 5px;
-    font-size: 18px;
+    font-size: 20px;
   }
   #container-paragraph-left {
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 80%;
+    width: 90%;
     padding: 0;
   }
   #container-paragraph-left > p {
     height: 100%;
-    font-size: 14px;
-    /* padding: 0 10px; */
+    font-size: 16px;
+    padding: 0 0 0 10px;
     display: flex;
     align-items: end;
   }
   #container-buttons {
     flex-direction: column;
     padding: 0;
-    margin: auto;
-    gap: 5px;
+    margin: 5px auto 0;
+    width: 90%;
+    height: 20%;
+    overflow: hidden;
+    gap: 10px;
   }
   #encriptar,
   #desencriptar {
-    width: 90%;
-    height: 40%;
+    width: 100%;
+    height: 50%;
     font-size: 16px;
     margin: auto;
+    overflow: hidden;
   }
 }
 
@@ -412,7 +430,7 @@ input {
   #container-text {
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 25px;
+    margin-top: 30px;
     height: 60%;
     margin-bottom: 10px;
   }
@@ -421,7 +439,7 @@ input {
     font-size: 20px;
   }
   #container-paragraph-left {
-    width: 80%;
+    width: 90%;
     height: 10%;
     margin: 0 auto;
     overflow: hidden;
@@ -433,19 +451,21 @@ input {
     display: flex;
     align-items: end;
     font-size: 16px;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
   }
   #container-buttons {
     flex-direction: column;
     padding: 0;
-    margin: auto;
+    margin: 5px auto 0;
+    width: 90%;
+    height: 20%;
     gap: 10px;
   }
   #encriptar,
   #desencriptar {
-    width: 90%;
-    height: 40%;
-    font-size: 20px;
+    width: 100%;
+    height: 50%;
+    font-size: 20px;  
     margin: auto;
   }
 }
@@ -471,7 +491,7 @@ input {
     height: 100%;
     display: flex;
     align-items: end;
-    font-size: 16px;
+    font-size: 18px;
   }
   #container-buttons {
     padding: 0 10px;
@@ -482,7 +502,7 @@ input {
   #desencriptar {
     margin: auto;
     height: 65%;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* Texto Encriptado */
@@ -553,3 +573,5 @@ input {
     padding: 25px;
   }
 }
+
+
