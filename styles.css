@@ -16,7 +16,7 @@ body {
   /* background-color: lightblue; */
   background-image: url(./imagenes/candado-encriptar.mp4);
   overflow: hidden;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -25,11 +25,11 @@ body {
 }
 
 #videoFondo {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   opacity: 0.7;
 }
 
@@ -357,17 +357,6 @@ input {
   #container-right {
     display: none;
   }
-
-  .container-multimedia {
-    /* position: relative; Cambiamos la posición para que el video de fondo se desplace con el contenido */
-    overflow: hidden; /* Ajustamos el overflow según sea necesario */
-  }
-  #videoFondo {
-    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
-    min-width: unset; /* Ajustamos el tamaño mínimo según sea necesario */
-    /* min-height: unset; Ajustamos el tamaño mínimo según sea necesario */
-  }
-
   main {
     height: 95vh;
   }
@@ -482,17 +471,6 @@ input {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
-  .container-multimedia {
-    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
-    overflow: hidden; /* Ajustamos el overflow según sea necesario */
-  }
-  #videoFondo {
-    position: relative; /* Cambiamos la posición para que el video de fondo se desplace con el contenido */
-    min-width: unset; /* Ajustamos el tamaño mínimo según sea necesario */
-    min-height: unset; /* Ajustamos el tamaño mínimo según sea necesario */
-  }
-
   .subcontainer-left {
     overflow: hidden;
     text-overflow: ellipsis;
