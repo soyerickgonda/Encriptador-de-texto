@@ -264,18 +264,18 @@ input {
   height: auto;
 }
 
-.close {
+#closeEncrip {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-.close:hover,
-.close:focus {
+/* #closeEncrip:hover,
+#closeEncrip:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
 /* Card Desencriptado */
 #container-card-desencriptado {
@@ -340,18 +340,18 @@ input {
   height: auto;
 }
 
-.close {
+#closeDesencrip {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-.close:hover,
-.close:focus {
+/* #closeDesencrip:hover,
+#closeDesencrip:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
 /* MEDIA QUERY (Responsive Desing) */
 
