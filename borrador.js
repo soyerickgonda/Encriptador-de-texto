@@ -81,7 +81,8 @@ const cardEncriptado = document.getElementById('container-card-encriptado');
 const textoModalEncriptado = document.getElementById("textoEncrip");
 const cardDesencriptado = document.getElementById('container-card-desencriptado');
 const textoModalDesencriptado = document.getElementById('textoDesencrip');
-const closeModal = document.getElementsByClassName("close");
+const closeModalEncrip = document.getElementById("closeEncrip");
+const closeModalDesencrip = document.getElementById("closeDesencrip");
 
 
 //Primero: crear una funcion que encripte y una funcion que desencripte
@@ -160,6 +161,10 @@ btnencriptar.addEventListener("click", function () {
   } 
 });
 
+closeModalEncrip.addEventListener("click", function () {
+  cardEncriptado.style.display = 'none';
+})
+
 // Evento para el Boton Desencriptar
 btndesencriptar.addEventListener("click", function () {
   const texto = textarea.value;
@@ -189,14 +194,9 @@ btndesencriptar.addEventListener("click", function () {
   } 
 });
 
-// ABRIR Y CERRAR MODAL PARA PANTALLAS < A 600px
-// function cerrarModal (){
-//   cardEncriptado.style.display = 'none';
-// }
-
-// closeModal.addEventListener('click', cerrarModal)
-
-
+closeModalDesencrip.addEventListener('click',function () {
+  cardDesencriptado.style.display = 'none';
+})
 
 
 /*
