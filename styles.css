@@ -201,7 +201,7 @@ input {
 }
 
 /* MODALES */
-/* Card Encriptado */
+/* CARD ENCRIPTADO */
 #container-card-encriptado {
   width: 100%;
   box-sizing: border-box;
@@ -244,6 +244,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* font-size: 18px; */
 }
 .container-img {
   justify-content: center;
@@ -280,7 +281,7 @@ input {
   cursor: pointer;
 } */
 
-/* Card Desencriptado */
+/* CARD DESENCRIPTADO */
 #container-card-desencriptado {
   width: 100%;
   box-sizing: border-box;
@@ -589,14 +590,13 @@ input {
 
   /* Texto Encriptado */
   #container-textarea-encrip {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin: 25px 10px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 45%;
+    height: 43%;
   }
   #textareaEncriptado {
-    padding: 0 20px;
+    padding: 0 15px;
   }
   #container-h3-encrip {
     height: 9%;
@@ -647,19 +647,26 @@ input {
 
   /* Texto Encriptado */
   #container-textarea-encrip {
-    height: 48%;
-    margin: 20px 0 10px;
+    margin: 25px 10px 10px;
+    padding: 0;
+    height: 45%;
   }
   #textareaEncriptado {
     /* padding: 25px 25px; */
-    padding: 0 20px;
+    padding: 0 15px;
   }
   #container-h3-encrip {
-    height: 5%;
+    height: 7%;
   }
 
   /* Texto Desencriptado */
   #container-textarea-desencrip > textarea {
     padding: 0 25px;
+  }
+}
+
+@media (min-width:  1440px) { 
+  #container-textarea-encrip {
+    padding: 5px 20px 20px 20px;
   }
 }
