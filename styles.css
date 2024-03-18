@@ -416,24 +416,7 @@ input {
     overflow: hidden;
     gap: 10px;
   }
-  /* #encriptar,
-  #desencriptar {
-    width: 100%;
-    height: 50%;
-    font-size: 16px;
-    margin: auto;
-    overflow: hidden;
-  } */
 }
-
-/* Horizontal */
-/* @media (min-width: 150px) and (max-width: 500px) and (orientation: landscape) {
-  #container-text {
-    background-color: aquamarine;
-    border: 1px solid red;
-    height: 100%;
-  }
-} */
 
 @media (min-width: 150px) and (max-width: 375px) {
   /* Ocultamos el contenedor derecho */
@@ -590,28 +573,31 @@ input {
 
   /* Texto Encriptado */
   #container-textarea-encrip {
+    height: 45%;
     margin: 25px 10px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 43%;
   }
   #textareaEncriptado {
     padding: 0 15px;
   }
   #container-h3-encrip {
     height: 9%;
+    /* margin-bottom: 9px; */
+  }
+  #container-img-encrip {
+    height: 30%;
   }
 
   /* Texto Desencriptado */
   #container-textarea-desencrip {
     height: 45%;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin: 25px 10px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   #container-textarea-desencrip > textarea {
-    padding: 0 20px;
+    padding: 0 15px;
   }
   #container-h3-desencrip {
     height: 9%;
@@ -621,6 +607,9 @@ input {
     display: flex;
     align-items: center;
     text-align: center;
+  }
+  #container-img-desencrip {
+    height: 30%;
   }
 }
 @media (min-width: 768px) and (max-width: 1440px) {
@@ -649,19 +638,24 @@ input {
   #container-textarea-encrip {
     margin: 25px 10px 10px;
     padding: 0;
-    height: 45%;
+    height: 44%;
   }
   #textareaEncriptado {
     /* padding: 25px 25px; */
     padding: 0 15px;
   }
   #container-h3-encrip {
-    height: 7%;
+    height: 10%;
+    margin: 0;
   }
 
   /* Texto Desencriptado */
+  #container-textarea-desencrip {
+    height: 44%;
+    margin: 25px 10px 10px;
+  }
   #container-textarea-desencrip > textarea {
-    padding: 0 25px;
+    padding: 0 15px;
   }
 }
 
