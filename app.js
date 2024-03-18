@@ -244,6 +244,3 @@ btnCopiar2.addEventListener("click", function () {
   alert('Texto copiado con exito');
 });
 
-// btnCopiar2.addEventListener('click', function () {
-//   console.log('hizo click en el btnCopiar2');
-// })
