@@ -4,10 +4,10 @@ const btnencriptar = document.getElementById("encriptar");
 const btndesencriptar = document.getElementById("desencriptar");
 
 //EXTRAEMOS el conatiner-right para luego reemplazar su contenido con todo lo creado para los botones (encriptado/desencriptado)
-// const containerLeft = document.getElementById('container-left');
+const containerLeft = document.getElementById('container-left');
 const containerRight = document.getElementById("container-right");
 
-//BOTON COPIAR TEXTO encriptado/desencriptado
+//BOTON COPIAR TEXTO ENCRIPTADO
 const containerBtn = document.createElement("div"); //contenedor del boton encriptado
 containerBtn.setAttribute("class", "container-btn");
 const btnCopiar = document.createElement("input"); //se crea el boton
@@ -16,10 +16,19 @@ btnCopiar.setAttribute("type", "button");
 btnCopiar.setAttribute("value", "Copiar");
 containerBtn.appendChild(btnCopiar);
 
+//BOTON COPIAR TEXTO DESENCRIPTADO
+const containerBtn2 = document.createElement("div"); //contenedor del boton encriptado
+containerBtn2.setAttribute("class", "container-btn");
+const btnCopiar2 = document.createElement("input"); //se crea el boton
+btnCopiar2.setAttribute("class", "btnCopiar");
+btnCopiar2.setAttribute("type", "button");
+btnCopiar2.setAttribute("value", "Copiar");
+containerBtn2.appendChild(btnCopiar2);
+
+
 //ENCRIPTADO
 const newDiv = document.createElement("div"); //Contenedor Encriptado
 newDiv.setAttribute("id", "container-encriptado");
-
 const containerTextEncrip = document.createElement("div"); //contenedor para el tag <textarea>
 containerTextEncrip.setAttribute("id", "container-textarea-encrip");
 const newTextareaEncrip = document.createElement("textarea"); //se crea <textarea> para el encriptado
@@ -45,18 +54,20 @@ imagen.src = "./imagenes/silicon1.jpeg";
 containerImgEncrip.appendChild(imagen);
 newDiv.appendChild(containerImgEncrip);
 
+
 //DESENCRIPTADO
 const newDiv2 = document.createElement("div"); //contenedor Desencriptado
 newDiv2.setAttribute("id", "container-desencriptado");
-
 const containerTextDesencrip = document.createElement("div"); //contenedor para textarea desencriptado
 containerTextDesencrip.setAttribute("id", "container-textarea-desencrip");
-const newTextareaDesencrip = document.createElement("textarea"); //se crea <textarea> desencriptado
+const newTextareaDesencrip = document.createElement("textarea"); //se crea <textarea> para el desencriptado
+newTextareaDesencrip.setAttribute("id", "textareaDesencriptado");
 containerTextDesencrip.appendChild(newTextareaDesencrip);
 newDiv2.appendChild(containerTextDesencrip);
 
 // Añadimos el Boton para copiar el texto desencriptado
-newDiv2.appendChild(containerBtn.cloneNode(true));
+// newDiv2.appendChild(containerBtn.cloneNode(true));
+newDiv2.appendChild(containerBtn2);
 
 // H3
 const containerH3Desencrip = document.createElement("div"); //contenedor h3 desencriptado
@@ -158,11 +169,15 @@ btnencriptar.addEventListener("click", function () {
     const textoEncriptado = encriptarTexto(texto);
     textoModalEncriptado.value = textoEncriptado;
     textarea.value = '';
+
+    containerRight.style.display = 'none';
+    containerLeft.style.display = 'none';
   } 
 });
 
 closeModalEncrip.addEventListener("click", function () {
   cardEncriptado.style.display = 'none';
+  containerLeft.style.display = 'block';
 })
 
 // Evento para el Boton Desencriptar
@@ -191,33 +206,44 @@ btndesencriptar.addEventListener("click", function () {
     const textoDesencriptado = desencriptarTexto(texto);
     textoModalDesencriptado.value = textoDesencriptado;
     textarea.value = "";
+
+    containerRight.style.display = 'none';
+    containerLeft.style.display = 'none';
   } 
 });
 
 closeModalDesencrip.addEventListener('click',function () {
   cardDesencriptado.style.display = 'none';
+  containerLeft.style.display = 'block';
 })
 
-
-/*
 // Evento del Btn Copiar
 btnCopiar.addEventListener("click", function () {
-  let textoAcopiar = "";
+  let copyText = document.getElementById("textareaEncriptado");
 
-  if (containerRight.contains(containerTextEncrip)) {
-    textoAcopiar = newTextareaEncrip.value;
-  } else if (containerRight.contains(containerTextDesencrip)) {
-    textoAcopiar = newTextareaDesencrip.value;
-  }
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
 
-  // Copiar el texto al portapapeles
-  navigator.clipboard
-    .writeText(textoAcopiar)
-    .then(function () {
-      alert("¡Texto copiado al portapapeles!");
-    })
-    .catch(function (error) {
-      console.error("Error al copiar el texto: ", error);
-    });
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert('Texto copiado con exito');
 });
-*/
+
+btnCopiar2.addEventListener("click", function () {
+  let copyText2 = document.getElementById("textareaDesencriptado");
+
+  // Select the text field
+  copyText2.select();
+  copyText2.setSelectionRange(0, 99999); // For mobile devices
+
+  navigator.clipboard.writeText(copyText2.value);
+
+  // Alert the copied text
+  alert('Texto copiado con exito');
+});
+
+// btnCopiar2.addEventListener('click', function () {
+//   console.log('hizo click en el btnCopiar2');
+// })
