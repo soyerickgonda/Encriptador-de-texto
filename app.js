@@ -139,7 +139,7 @@ function desencriptarTexto(texto) {
 
 // Funcion que valida el texto ingresado a textarea (tanto en el encriptado/desencriptado)
 function validarTexto(texto) {
-  const regex = /^[a-z\s]*[aeiou]+[a-z\s]*$/; // Expresión regular para letras y espacios
+  const regex = /^[a-z\s¡!¿?\-]*[aeiou]+[a-z\s¡!¿?\-]*$/; // Expresión regular para letras y espacios
   return regex.test(texto);
 }
 
